@@ -66,7 +66,7 @@ print(data.describe())
 #close_prices = data['Close'] # This line caused an error with yfinance data with MultiIndex
 
 # Calculate RSI
-rsi_values = calculate_rsi(data['Close']) # Pass the 'Close' column to the function
+rsi_values = calculate_rsi(data['close']) # Pass the 'Close' column to the function
 data['rsi']=rsi_values
 
 data=data.fillna(0)
