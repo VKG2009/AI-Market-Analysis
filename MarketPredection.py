@@ -209,7 +209,7 @@ if 'rsi' in test.columns and not test['rsi'].isna().all():
         x=train['date'],
         y=train['rsi'],
         mode='lines',
-        name='RSI',
+        name='Train (Actual)',
         line=dict(color='#d62728', width=3)
     ))
 
@@ -217,8 +217,16 @@ if 'rsi' in test.columns and not test['rsi'].isna().all():
         x=test['date'],
         y=test['rsi'],
         mode='lines',
-        name='RSI',
+        name='Test (Actual) ',
         line=dict(color='#00ff00', width=3)
+    ))
+    
+      fig_rsi.add_trace(go.Scatter(
+        x=test['date'],
+        y=test['Predictions'],
+        mode='lines',
+        name='Predictions',
+        line=dict(color='#ff0000', width=3)
     ))
     
     # Add overbought/oversold lines
