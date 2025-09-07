@@ -57,10 +57,10 @@ from yahoofinancials import YahooFinancials
 test_stock = yf.Ticker("AAPL")
 test_data = test_stock.history(period="5d")
 if not test_data.empty:
-    status['yfinance']['working'] = True
-    status['yfinance']['message'] = "✅ yfinance is working"
+    #status['yfinance']['working'] = True
+    st.write("✅ yfinance is working")
 else:
-    status['yfinance']['message'] = "❌ yfinance returned no data"
+    st.write( "❌ yfinance returned no data")
     
 # Print the first few rows of the DataFrame
 print(df.head())
