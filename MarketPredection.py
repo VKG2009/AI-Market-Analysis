@@ -134,7 +134,7 @@ stock_close = data['rsi'] # Select the 'rsi' column as a Series
 dataset = stock_close.values.reshape(-1, 1) #convert to numpy array and reshape
 
 
-training_data_len = int(np.ceil(len(dataset) * 0.95))
+training_data_len = int(np.ceil(len(dataset) * 0.80))
 
 
 
