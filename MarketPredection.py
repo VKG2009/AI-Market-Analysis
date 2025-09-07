@@ -102,7 +102,7 @@ print(data.describe())
 
 
 # Drop non-numeric columns
-numeric_data = data.select_dtypes(include=["int64","float64"])
+#numeric_data = data.select_dtypes(include=["int64","float64"])
 
 # Plot 3 - Check for correlation between features
 plt.figure(figsize=(8,6))
