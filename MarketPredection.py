@@ -180,7 +180,7 @@ model.add(keras.layers.Dense(128, activation="relu"))
 model.add(keras.layers.Dropout(0.5))
 
 # Final Output Layer
-model.add(keras.layers.Dense(1))
+model.add(keras.layers.Dense(5))
 
 model.summary()
 model.compile(optimizer="adam",
