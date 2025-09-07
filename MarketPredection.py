@@ -203,7 +203,7 @@ test = test.copy()
 
 
 # RSI chart
-if 'RSI' in test.columns and not df['RSI'].isna().all():
+if 'rsi' in test.columns and not df['rsi'].isna().all():
     fig_rsi = go.Figure()
     fig_rsi.add_trace(go.Scatter(
         x=test['date'],
