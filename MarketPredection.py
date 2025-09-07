@@ -190,6 +190,12 @@ test =  data[training_data_len:]
 test = test.copy()
 
 test['Predictions'] = predictions
+Predict_data=test
+
+train['category'] = '#0000ff'
+test['category'] = '#00ff00'
+Predict_data['category'] = '#ff0000'
+
 
 plt.figure(figsize=(12,8))
 plt.plot(train['date'], train['rsi'], label="Train (Actual)", color='blue')
@@ -204,9 +210,9 @@ plt.plot(test['date'], test['Predictions'], label="Predictions", color='red')
 #st.plotly_chart(fig, config = {'scrollZoom': False})
 
 stdf=st.dataframe(train)
-my_chart = st.line_chart(train['rsi'],color='#0000ff')
+my_chart = st.line_chart(train['rsi'],color='category')
 ##ffaa0088
-my_chart.add_rows(test['rsi'])
+my_chart.add_rows(test['rsi'],color='category')
 #my_chart.add_rows(test['Predictions'])
 #mainchart=st.line_chart(stdf) 
 #x=train['date'],y=test['rsi'])
