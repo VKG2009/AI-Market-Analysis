@@ -142,8 +142,8 @@ training_data_len = int(np.ceil(len(dataset) * 0.80))
 scaler = StandardScaler()
 scaled_data = scaler.fit_transform(dataset)
 
-#training_data = scaled_data[:training_data_len] #95% of all out data
-training_data = dataset[:training_data_len] #95% of all out data
+training_data = scaled_data[:training_data_len] #95% of all out data
+#training_data = dataset[:training_data_len] #95% of all out data
 
 
 X_train, y_train = [], []
@@ -190,7 +190,7 @@ training = model.fit(X_train, y_train, epochs=20, batch_size=32)
 # Prep the test data
 test_data = scaled_data[training_data_len - 60:]
 
-test_data = dataset[training_data_len - 60:]
+#test_data = dataset[training_data_len - 60:]
 
 X_test, y_test = [], dataset[training_data_len:]
 
