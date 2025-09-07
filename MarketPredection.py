@@ -218,7 +218,7 @@ if 'rsi' in test.columns and not test['rsi'].isna().all():
     fig_rsi.add_hline(y=30, line_dash="dash", line_color="#2ca02c", annotation_text="Oversold (30)")
     
     fig_rsi.update_layout(
-        title=f"{ticker} RSI (Relative Strength Index)",
+        title= "APPLE RSI (Relative Strength Index)",
         xaxis_title="Date",
         yaxis_title="RSI",
         yaxis=dict(range=[0, 100]),
