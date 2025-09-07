@@ -60,9 +60,9 @@ os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
 #print(data.columns)
 data = pd.read_csv("MicrosoftStock.csv")
 
-print(data.head())
-print(data.info())
-print(data.describe())
+st.write(data.head())
+st.write(data.info())
+st.write(data.describe())
 #close_prices = data['Close'] # This line caused an error with yfinance data with MultiIndex
 
 # Calculate RSI
@@ -195,6 +195,9 @@ plt.figure(figsize=(12,8))
 plt.plot(train['date'], train['rsi'], label="Train (Actual)", color='blue')
 plt.plot(test['date'], test['rsi'], label="Test (Actual)", color='orange')
 plt.plot(test['date'], test['Predictions'], label="Predictions", color='red')
+import plotly.exprss as px
+fig = px.scatter(
+
 plt.title("Our Stock Predictions based on RSI")
 plt.xlabel("Date")
 plt.ylabel("RSI Price")
