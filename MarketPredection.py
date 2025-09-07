@@ -50,14 +50,14 @@ import plotly.express as px
 from pandas_datareader import data as pdr
 import datetime
 
-# Define ticker and date range
-ticker = "AAPL"
-start_date = datetime.datetime(2020, 1, 1)
-end_date = datetime.datetime(2023, 12, 31)
-
-# Retrieve data
-df = pdr.get_data_yahoo(ticker, start=start_date, end=end_date)
-
+test_stock = yf.Ticker("AAPL")
+test_data = test_stock.history(period="5d")
+if not test_data.empty:
+    status['yfinance']['working'] = True
+    status['yfinance']['message'] = "✅ yfinance is working"
+else:
+    status['yfinance']['message'] = "❌ yfinance returned no data"
+    
 # Print the first few rows of the DataFrame
 print(df.head())
 st.write(df.head())
