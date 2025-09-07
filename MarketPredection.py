@@ -86,9 +86,12 @@ st.write(data.info())
 st.write(data.describe())
 close_prices = data['Close'] # This line caused an error with yfinance data with MultiIndex
 
+
+st.write(data['Date'])
 # Calculate RSI
 rsi_values = calculate_rsi(data['Close']) # Pass the 'Close' column to the function
 data['rsi']=rsi_values
+st.write(data['Date'])
 
 data=data.fillna(0)
 
