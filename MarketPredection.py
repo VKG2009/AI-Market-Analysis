@@ -63,8 +63,8 @@ else:
     st.write( "❌ yfinance returned no data")
     
 # Print the first few rows of the DataFrame
-print(df.head())
-st.write(df.head())
+print(test_data.head())
+st.write(test_data.head())
 
 
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
