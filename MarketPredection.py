@@ -193,7 +193,7 @@ test =  data[training_data_len:]
 
 test = test.copy()
 
-#test['Predictions'] = predictions
+test['Predictions'] = predictions
 #Predict_data=test
 
 #train['category'] = '#0000ff'
