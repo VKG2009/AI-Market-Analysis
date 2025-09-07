@@ -207,7 +207,7 @@ stdf=st.dataframe(train)
 my_chart = st.line_chart(y=train['rsi'])
 
 #mainchart=st.line_chart(stdf) 
-#x=train['date'],y=train['rsi'])
+#x=train['date'],y=test['rsi'])
 #mainchart.add_rows(x=test['date'], y=test['rsi'],color='orange')
 #mainchart.add_rows(x=test['date'], y=test['Predictions'], color='red')
 
