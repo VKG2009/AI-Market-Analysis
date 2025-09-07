@@ -203,29 +203,29 @@ test = test.copy()
 
 
 # RSI chart
-            if 'RSI' in test.columns and not df['RSI'].isna().all():
-                fig_rsi = go.Figure()
-                fig_rsi.add_trace(go.Scatter(
-                    x=test['date'],
-                    y=df['rsi'],
-                    mode='lines',
-                    name='RSI',
-                    line=dict(color='#d62728', width=3)
-                ))
-                
-                # Add overbought/oversold lines
-                fig_rsi.add_hline(y=70, line_dash="dash", line_color="#ff7f0e", annotation_text="Overbought (70)")
-                fig_rsi.add_hline(y=30, line_dash="dash", line_color="#2ca02c", annotation_text="Oversold (30)")
-                
-                fig_rsi.update_layout(
-                    title=f"{ticker} RSI (Relative Strength Index)",
-                    xaxis_title="Date",
-                    yaxis_title="RSI",
-                    yaxis=dict(range=[0, 100]),
-                    template='plotly_white'
-                )
-                
-                st.plotly_chart(fig_rsi, use_container_width=True)
+if 'RSI' in test.columns and not df['RSI'].isna().all():
+fig_rsi = go.Figure()
+fig_rsi.add_trace(go.Scatter(
+    x=test['date'],
+    y=df['rsi'],
+    mode='lines',
+    name='RSI',
+    line=dict(color='#d62728', width=3)
+))
+
+# Add overbought/oversold lines
+fig_rsi.add_hline(y=70, line_dash="dash", line_color="#ff7f0e", annotation_text="Overbought (70)")
+fig_rsi.add_hline(y=30, line_dash="dash", line_color="#2ca02c", annotation_text="Oversold (30)")
+
+fig_rsi.update_layout(
+    title=f"{ticker} RSI (Relative Strength Index)",
+    xaxis_title="Date",
+    yaxis_title="RSI",
+    yaxis=dict(range=[0, 100]),
+    template='plotly_white'
+)
+
+st.plotly_chart(fig_rsi, use_container_width=True)
 
 
 
