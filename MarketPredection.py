@@ -226,7 +226,7 @@ if 'RSI' in test.columns and not df['RSI'].isna().all():
     )
     
     st.plotly_chart(fig_rsi, use_container_width=True)
-end if
+endif
 
 
 plt.figure(figsize=(12,8))
