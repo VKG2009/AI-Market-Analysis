@@ -198,7 +198,7 @@ plt.plot(test['date'], test['Predictions'], label="Predictions", color='red')
 #import plotly.exprss as px
 #fig = px.scatter(
 
-mainchart=st.line_chart(x=train['date'],y=train['rsi'])
+mainchart=st.line_chart(st.dataframe(train)) #x=train['date'],y=train['rsi'])
 mainchart.add_rows(x=test['date'], y=test['rsi'],color='orange')
 mainchart.add_rows(x=test['date'], y=test['Predictions'], color='red')
 
