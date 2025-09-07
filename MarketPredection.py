@@ -193,8 +193,10 @@ test['Predictions'] = predictions
 Predict_data=test
 
 train['category'] = '#0000ff'
-test['category'] = '#00ff00'
-Predict_data['category'] = '#ff0000'
+test.DataFrame({"category": "#00ff00"})
+Predict_data.DataFrame({"category": "#ff0000"})
+
+#Predict_data['category'] = '#ff0000'
 
 
 plt.figure(figsize=(12,8))
