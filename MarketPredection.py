@@ -211,19 +211,13 @@ test =  data[training_data_len:]
 test = test.copy()
 
 test['Predictions'] = predictions
-#Predict_data=test
-
-#train['category'] = '#0000ff'
-#test['category'] = "#00ff00"
-#Predict_data.DataFrame({"category": "#ff0000"})
-#Predict_data['category'] = '#ff0000'
 
 
 # RSI chart
 if 'rsi' in test.columns and not test['rsi'].isna().all():
     fig_rsi = go.Figure()
     fig_rsi.add_trace(go.Scatter(
-        x=train['date'],
+        x=train['Date'],
         y=train['rsi'],
         mode='lines',
         name='Train (Actual)',
@@ -231,7 +225,7 @@ if 'rsi' in test.columns and not test['rsi'].isna().all():
     ))
 
     fig_rsi.add_trace(go.Scatter(
-        x=test['date'],
+        x=test['Date'],
         y=test['rsi'],
         mode='lines',
         name='Test (Actual) ',
@@ -239,7 +233,7 @@ if 'rsi' in test.columns and not test['rsi'].isna().all():
     ))
     
     fig_rsi.add_trace(go.Scatter(
-        x=test['date'],
+        x=test['Date'],
         y=test['Predictions'],
         mode='lines',
         name='Predictions',
@@ -263,9 +257,9 @@ if 'rsi' in test.columns and not test['rsi'].isna().all():
 
 
 plt.figure(figsize=(12,8))
-plt.plot(train['date'], train['rsi'], label="Train (Actual)", color='blue')
-plt.plot(test['date'], test['rsi'], label="Test (Actual)", color='orange')
-plt.plot(test['date'], test['Predictions'], label="Predictions", color='red')
+plt.plot(train['Date'], train['rsi'], label="Train (Actual)", color='blue')
+plt.plot(test['Date'], test['rsi'], label="Test (Actual)", color='orange')
+plt.plot(test['Date'], test['Predictions'], label="Predictions", color='red')
 #import plotly.exprss as px
 #fig = px.scatter(
 
