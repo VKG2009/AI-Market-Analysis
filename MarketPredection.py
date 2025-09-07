@@ -71,22 +71,23 @@ os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
 #yf.enable_debug_mode()
 
 #data = yf.download('AAPL', start='2013-01-01', end='2025-09-01')
+data=test_stock.history(start='2013-01-01', end='2025-09-01')
 #close_prices = stock_data['Close']
 
 #data = data.reset_index()
 #data
 
 #data = data.loc[:,['Date','Close']]
-#print(data.columns)
-data = pd.read_csv("MicrosoftStock.csv")
+print(data.columns)
+#data = pd.read_csv("MicrosoftStock.csv")
 
 st.write(data.head())
 st.write(data.info())
 st.write(data.describe())
-#close_prices = data['Close'] # This line caused an error with yfinance data with MultiIndex
+close_prices = data['Close'] # This line caused an error with yfinance data with MultiIndex
 
 # Calculate RSI
-rsi_values = calculate_rsi(data['close']) # Pass the 'Close' column to the function
+rsi_values = calculate_rsi(data['Close']) # Pass the 'Close' column to the function
 data['rsi']=rsi_values
 
 data=data.fillna(0)
