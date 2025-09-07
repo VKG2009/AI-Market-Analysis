@@ -198,9 +198,9 @@ plt.plot(test['date'], test['Predictions'], label="Predictions", color='red')
 #import plotly.exprss as px
 #fig = px.scatter(
 
-st.line_chart(train['date'], train['rsi'], label="Train (Actual)", color='blue')
-st.line_chart(test['date'], test['rsi'], label="Test (Actual)", color='orange')
-st.line_chart(test['date'], test['Predictions'], label="Predictions", color='red')
+st.line_chart(train['date'], train['rsi'])
+#st.line_chart(test['date'], test['rsi'], label="Test (Actual)", color='orange')
+#st.line_chart(test['date'], test['Predictions'], label="Predictions", color='red')
 
 plt.title("Our Stock Predictions based on RSI")
 plt.xlabel("Date")
