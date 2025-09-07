@@ -6,5 +6,6 @@ seaborn
 yfinance
 plotly
 pandas_datareader
-curcl_cffi=0.13.0
+curcl_cffi==0.13.0
+
 
