@@ -1,4 +1,4 @@
-index,date,open,high,low,close,volume,Name
+index,Date,Open,High,low,Close,Volume,Name
 390198,2013-02-08,27.35,27.71,27.31,27.55,33318306,MSFT
 390199,2013-02-11,27.65,27.92,27.5,27.86,32247549,MSFT
 390200,2013-02-12,27.88,28.0,27.75,27.88,35990829,MSFT
