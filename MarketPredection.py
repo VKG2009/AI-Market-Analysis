@@ -204,8 +204,9 @@ plt.plot(test['date'], test['Predictions'], label="Predictions", color='red')
 #st.plotly_chart(fig, config = {'scrollZoom': False})
 
 stdf=st.dataframe(train)
-my_chart = st.line_chart(test['rsi'])
-
+my_chart = st.line_chart(train['rsi'],color='blue')
+my_chart.add_rows(test['rsi'],color='green')
+#my_chart.add_rows(test['Predictions'])
 #mainchart=st.line_chart(stdf) 
 #x=train['date'],y=test['rsi'])
 #mainchart.add_rows(x=test['date'], y=test['rsi'],color='orange')
