@@ -60,6 +60,7 @@ df = pdr.get_data_yahoo(ticker, start=start_date, end=end_date)
 
 # Print the first few rows of the DataFrame
 print(df.head())
+st.write(df.head())
 
 import yfinance as yf
 from yahoofinancials import YahooFinancials
