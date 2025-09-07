@@ -192,9 +192,9 @@ test = test.copy()
 test['Predictions'] = predictions
 
 plt.figure(figsize=(12,8))
-plt.plot(train['Date'], train['rsi'], label="Train (Actual)", color='blue')
-plt.plot(test['Date'], test['rsi'], label="Test (Actual)", color='orange')
-plt.plot(test['Date'], test['Predictions'], label="Predictions", color='red')
+plt.plot(train['date'], train['rsi'], label="Train (Actual)", color='blue')
+plt.plot(test['date'], test['rsi'], label="Test (Actual)", color='orange')
+plt.plot(test['date'], test['Predictions'], label="Predictions", color='red')
 plt.title("Our Stock Predictions based on RSI")
 plt.xlabel("Date")
 plt.ylabel("RSI Price")
