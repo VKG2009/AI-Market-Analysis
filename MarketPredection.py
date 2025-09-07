@@ -78,7 +78,7 @@ data=test_stock.history(start='2013-01-01', end='2025-09-01')
 #data
 
 #data = data.loc[:,['Date','Close']]
-print(data.columns)
+st.write(data.columns)
 #data = pd.read_csv("MicrosoftStock.csv")
 
 st.write(data.head())
