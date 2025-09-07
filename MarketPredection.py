@@ -35,7 +35,7 @@ def calculate_rsi(data, periods=14):
 
 # Imports
 from tensorflow import keras
-
+import streamlit as st
 import pandas as pd
 import numpy as np
 from sklearn.preprocessing import StandardScaler
@@ -200,3 +200,9 @@ plt.xlabel("Date")
 plt.ylabel("RSI Price")
 plt.legend()
 plt.show()
+
+fig, ax = plt.subplots()
+ax.plot(x, y)
+ax.set_title("Sine Wave")
+
+st.pyplot(fig)
