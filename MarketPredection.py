@@ -50,6 +50,10 @@ import plotly.express as px
 from pandas_datareader import data as pdr
 import datetime
 
+import yfinance as yf
+from yahoofinancials import YahooFinancials
+
+
 test_stock = yf.Ticker("AAPL")
 test_data = test_stock.history(period="5d")
 if not test_data.empty:
@@ -62,8 +66,6 @@ else:
 print(df.head())
 st.write(df.head())
 
-import yfinance as yf
-from yahoofinancials import YahooFinancials
 
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
 #yf.enable_debug_mode()
