@@ -48,6 +48,7 @@ import yfinance as yf
 from yahoofinancials import YahooFinancials
 
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
+yf.enable_debug_mode()
 
 data = yf.download('AAPL', start='2013-01-01', end='2025-09-01')
 #close_prices = stock_data['Close']
