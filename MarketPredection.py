@@ -44,6 +44,10 @@ import seaborn as sns
 import os
 from datetime import datetime
 
+import plotly.graph_objects as go
+import plotly.express as px
+
+
 import yfinance as yf
 from yahoofinancials import YahooFinancials
 
@@ -189,13 +193,40 @@ test =  data[training_data_len:]
 
 test = test.copy()
 
-test['Predictions'] = predictions
-Predict_data=test
+#test['Predictions'] = predictions
+#Predict_data=test
 
-train['category'] = '#0000ff'
-test['category'] = "#00ff00"
+#train['category'] = '#0000ff'
+#test['category'] = "#00ff00"
 #Predict_data.DataFrame({"category": "#ff0000"})
-Predict_data['category'] = '#ff0000'
+#Predict_data['category'] = '#ff0000'
+
+
+# RSI chart
+            if 'RSI' in test.columns and not df['RSI'].isna().all():
+                fig_rsi = go.Figure()
+                fig_rsi.add_trace(go.Scatter(
+                    x=test['date'],
+                    y=df['rsi'],
+                    mode='lines',
+                    name='RSI',
+                    line=dict(color='#d62728', width=3)
+                ))
+                
+                # Add overbought/oversold lines
+                fig_rsi.add_hline(y=70, line_dash="dash", line_color="#ff7f0e", annotation_text="Overbought (70)")
+                fig_rsi.add_hline(y=30, line_dash="dash", line_color="#2ca02c", annotation_text="Oversold (30)")
+                
+                fig_rsi.update_layout(
+                    title=f"{ticker} RSI (Relative Strength Index)",
+                    xaxis_title="Date",
+                    yaxis_title="RSI",
+                    yaxis=dict(range=[0, 100]),
+                    template='plotly_white'
+                )
+                
+                st.plotly_chart(fig_rsi, use_container_width=True)
+
 
 
 plt.figure(figsize=(12,8))
