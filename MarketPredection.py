@@ -71,7 +71,8 @@ os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
 #yf.enable_debug_mode()
 
 #data = yf.download('AAPL', start='2013-01-01', end='2025-09-01')
-data=test_stock.history(start='2013-01-01', end='2025-09-01')
+data=test_stock.history(period="3600d")
+#start='2013-01-01', end='2025-09-01')
 #close_prices = stock_data['Close']
 
 data = data.reset_index()
