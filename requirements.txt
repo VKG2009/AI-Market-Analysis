@@ -3,3 +3,4 @@ yahoofinancials
 scikit-learn
 matplotlib
 seaborn
+yfinance
