@@ -221,7 +221,7 @@ if 'rsi' in test.columns and not test['rsi'].isna().all():
         line=dict(color='#00ff00', width=3)
     ))
     
-      fig_rsi.add_trace(go.Scatter(
+    fig_rsi.add_trace(go.Scatter(
         x=test['date'],
         y=test['Predictions'],
         mode='lines',
