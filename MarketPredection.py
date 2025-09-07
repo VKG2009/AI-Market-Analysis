@@ -136,8 +136,8 @@ training_data_len = int(np.ceil(len(dataset) * 0.95))
 
 
 # Preprocessing Stages
-#scaler = StandardScaler()
-#scaled_data = scaler.fit_transform(dataset)
+scaler = StandardScaler()
+scaled_data = scaler.fit_transform(dataset)
 
 #training_data = scaled_data[:training_data_len] #95% of all out data
 training_data = dataset[:training_data_len] #95% of all out data
@@ -185,7 +185,7 @@ model.compile(optimizer="adam",
 training = model.fit(X_train, y_train, epochs=20, batch_size=32)
 
 # Prep the test data
-#test_data = scaled_data[training_data_len - 60:]
+test_data = scaled_data[training_data_len - 60:]
 
 test_data = dataset[training_data_len - 60:]
 
@@ -200,8 +200,8 @@ X_test = np.reshape(X_test, (X_test.shape[0],X_test.shape[1],1 ))
 
 # Make a Prediction
 predictions = model.predict(X_test)
-#predictions= dataset.inverse_transform(predictions)
-#predictions = scaler.inverse_transform(predictions)
+predictions= dataset.inverse_transform(predictions)
+predictions = scaler.inverse_transform(predictions)
 
 
 # Plotting data
