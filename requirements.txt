@@ -2,3 +2,4 @@ tensorflow
 yahoofinancials
 scikit-learn
 matplotlib
+seaborn
