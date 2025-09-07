@@ -207,7 +207,7 @@ if 'rsi' in test.columns and not test['rsi'].isna().all():
     fig_rsi = go.Figure()
     fig_rsi.add_trace(go.Scatter(
         x=test['date'],
-        y=df['rsi'],
+        y=test['rsi'],
         mode='lines',
         name='RSI',
         line=dict(color='#d62728', width=3)
