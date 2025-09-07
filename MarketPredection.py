@@ -74,10 +74,10 @@ os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
 data=test_stock.history(start='2013-01-01', end='2025-09-01')
 #close_prices = stock_data['Close']
 
-#data = data.reset_index()
-#data
+data = data.reset_index()
+data
 
-#data = data.loc[:,['Date','Close']]
+data = data.loc[:,['Date','Close'],'Volume','Dividends']
 st.write(data.columns)
 #data = pd.read_csv("MicrosoftStock.csv")
 
