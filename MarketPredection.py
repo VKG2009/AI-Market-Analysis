@@ -198,12 +198,18 @@ plt.plot(test['date'], test['Predictions'], label="Predictions", color='red')
 #import plotly.exprss as px
 #fig = px.scatter(
 
-stdf=st.dataframe(train)
+import plotly.graph_objects as go
 
-mainchart=st.line_chart(stdf) 
+
+st.plotly_chart(fig, config = {'scrollZoom': False})
+
+stdf=st.dataframe(train)
+my_chart = st.line_chart(train)
+
+#mainchart=st.line_chart(stdf) 
 #x=train['date'],y=train['rsi'])
-mainchart.add_rows(x=test['date'], y=test['rsi'],color='orange')
-mainchart.add_rows(x=test['date'], y=test['Predictions'], color='red')
+#mainchart.add_rows(x=test['date'], y=test['rsi'],color='orange')
+#mainchart.add_rows(x=test['date'], y=test['Predictions'], color='red')
 
 plt.title("Our Stock Predictions based on RSI")
 plt.xlabel("Date")
