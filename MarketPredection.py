@@ -212,4 +212,4 @@ fig, ax = plt.subplots()
 #ax.plot(x, y)
 #ax.set_title("Sine Wave")
 
-st.pyplot(fig)
+#st.pyplot(fig)
