@@ -47,6 +47,19 @@ from datetime import datetime
 import plotly.graph_objects as go
 import plotly.express as px
 
+from pandas_datareader import data as pdr
+import datetime
+
+# Define ticker and date range
+ticker = "AAPL"
+start_date = datetime.datetime(2020, 1, 1)
+end_date = datetime.datetime(2023, 12, 31)
+
+# Retrieve data
+df = pdr.get_data_yahoo(ticker, start=start_date, end=end_date)
+
+# Print the first few rows of the DataFrame
+print(df.head())
 
 import yfinance as yf
 from yahoofinancials import YahooFinancials
