@@ -198,10 +198,10 @@ plt.plot(test['date'], test['Predictions'], label="Predictions", color='red')
 #import plotly.exprss as px
 #fig = px.scatter(
 
-import plotly.graph_objects as go
+#import plotly.graph_objects as go
 
 
-st.plotly_chart(fig, config = {'scrollZoom': False})
+#st.plotly_chart(fig, config = {'scrollZoom': False})
 
 stdf=st.dataframe(train)
 my_chart = st.line_chart(train)
