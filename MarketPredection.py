@@ -102,7 +102,7 @@ print(data.describe())
 
 
 # Drop non-numeric columns
-#numeric_data = data.select_dtypes(include=["int64","float64"])
+numeric_data = data.select_dtypes(include=["int64","float64"])
 
 # Plot 3 - Check for correlation between features
 plt.figure(figsize=(8,6))
@@ -110,7 +110,7 @@ sns.heatmap(numeric_data.corr(), annot=True, cmap="coolwarm")
 plt.title("Feature Correlation Heatmap")
 # plt.show()
 
-#data['Date'] = pd.to_datetime(data['Date'])
+data['Date'] = pd.to_datetime(data['Date'])
 #prediction = data.loc[
 #    (data['Date'] > datetime(2024,1,1)) &
 #    (data['Date'] < datetime(2025,9,1))
