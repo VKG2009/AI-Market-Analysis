@@ -203,7 +203,7 @@ X_test = np.reshape(X_test, (X_test.shape[0],X_test.shape[1],1 ))
 
 # Make a Prediction
 predictions = model.predict(X_test)
-predictions= dataset.inverse_transform(predictions)
+#predictions= dataset.inverse_transform(predictions)
 predictions = scaler.inverse_transform(predictions)
 
 
