@@ -226,7 +226,7 @@ if 'rsi' in test.columns and not test['rsi'].isna().all():
         y=test['Predictions'],
         mode='lines',
         name='Predictions',
-        line=dict(color='#ff0000', width=3)
+        line=dict(color='#0000ff', width=3)
     ))
     
     # Add overbought/oversold lines
