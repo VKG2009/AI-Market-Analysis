@@ -56,7 +56,7 @@ os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
 #data = data.reset_index()
 #data
 
-data = data.loc[:,['Date','Close']]
+#data = data.loc[:,['Date','Close']]
 print(data.columns)
 data = pd.read_csv("MicrosoftStock.csv")
 
