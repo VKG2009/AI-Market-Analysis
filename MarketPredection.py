@@ -48,17 +48,17 @@ import yfinance as yf
 from yahoofinancials import YahooFinancials
 
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
-yf.enable_debug_mode()
+#yf.enable_debug_mode()
 
-data = yf.download('AAPL', start='2013-01-01', end='2025-09-01')
+#data = yf.download('AAPL', start='2013-01-01', end='2025-09-01')
 #close_prices = stock_data['Close']
 
-data = data.reset_index()
+#data = data.reset_index()
 #data
 
 data = data.loc[:,['Date','Close']]
 print(data.columns)
-#data = pd.read_csv("MicrosoftStock.csv")
+data = pd.read_csv("MicrosoftStock.csv")
 
 print(data.head())
 print(data.info())
@@ -90,10 +90,10 @@ plt.title("Feature Correlation Heatmap")
 # plt.show()
 
 #data['Date'] = pd.to_datetime(data['Date'])
-prediction = data.loc[
-    (data['Date'] > datetime(2024,1,1)) &
-    (data['Date'] < datetime(2025,9,1))
-]
+#prediction = data.loc[
+#    (data['Date'] > datetime(2024,1,1)) &
+#    (data['Date'] < datetime(2025,9,1))
+#]
 
 prediction=data
 
