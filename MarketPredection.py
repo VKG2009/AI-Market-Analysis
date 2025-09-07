@@ -119,7 +119,7 @@ plt.title("Feature Correlation Heatmap")
 prediction=data
 
 plt.figure(figsize=(12,6))
-plt.plot(data['date'], data['rsi'],color="blue")
+plt.plot(data['Date'], data['rsi'],color="blue")
 plt.xlabel("date")
 plt.ylabel("rsi")
 plt.title("Price over time")
