@@ -210,7 +210,7 @@ plt.plot(test['date'], test['Predictions'], label="Predictions", color='red')
 #st.plotly_chart(fig, config = {'scrollZoom': False})
 
 stdf=st.dataframe(train)
-my_chart = st.line_chart(train['rsi'],color='category')
+my_chart = st.line_chart(train['rsi'],color='#0000ff')
 ##ffaa0088
 my_chart.add_rows(test['rsi'],color='category')
 #my_chart.add_rows(test['Predictions'])
