@@ -54,35 +54,35 @@ import yfinance as yf
 from yahoofinancials import YahooFinancials
 
 
-test_stock = yf.Ticker("AAPL")
-test_data = test_stock.history(period="5d")
-if not test_data.empty:
+#test_stock = yf.Ticker("AAPL")
+#test_data = test_stock.history(period="5d")
+#if not test_data.empty:
     #status['yfinance']['working'] = True
-    st.write("✅ yfinance is working")
-else:
-    st.write( "❌ yfinance returned no data")
+#    st.write("✅ yfinance is working")
+#else:
+#    st.write( "❌ yfinance returned no data")
     
 # Print the first few rows of the DataFrame
-print(test_data.head())
-st.write(test_data.head())
+#print(test_data.head())
+#st.write(test_data.head())
 
 
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
-yf.enable_debug_mode()
+#yf.enable_debug_mode()
 
 #data = yf.download('AAPL', start='2013-01-01', end='2025-09-01')
 
-data=test_stock.history(period="3600d")
+#data=test_stock.history(period="3600d")
 
 #start='2013-01-01', end='2025-09-01')
-close_prices = stock_data['Close']
+#close_prices = stock_data['Close']
 
-data = data.reset_index()
+#data = data.reset_index()
 #data
 
-data = data.loc[:,['Date','Close','Volume','Dividends']]
-st.write(data.columns)
-#data = pd.read_csv("MicrosoftStock.csv")
+#data = data.loc[:,['Date','Close','Volume','Dividends']]
+#st.write(data.columns)
+data = pd.read_csv("MicrosoftStock.csv")
 
 st.write(data.head())
 st.write(data.info())
