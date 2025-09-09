@@ -83,7 +83,7 @@ os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
 #data = data.loc[:,['Date','Close','Volume','Dividends']]
 #st.write(data.columns)
 #data = pd.read_csv("MicrosoftStock.csv")
-data = pd.read_csv("data/apple_data.csv")
+data = pd.read_csv("apple_data.csv")
 
 st.write(data.head())
 st.write(data.info())
