@@ -83,7 +83,7 @@ os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
 #data = data.loc[:,['Date','Close','Volume','Dividends']]
 #st.write(data.columns)
 #data = pd.read_csv("MicrosoftStock.csv")
-data = pd.read_csv("apple_data.csv")
+data = pd.read_csv("data/apple_data.csv")
 
 st.write(data.head())
 st.write(data.info())
@@ -276,10 +276,10 @@ plt.plot(test['Date'], test['Predictions'], label="Predictions", color='red')
 
 #st.plotly_chart(fig, config = {'scrollZoom': False})
 
-stdf=st.dataframe(train)
-my_chart = st.line_chart(train['rsi'],color='#0000ff')
+#stdf=st.dataframe(train)
+#my_chart = st.line_chart(train['rsi'],color='#0000ff')
 ##ffaa0088
-my_chart.add_rows(test['rsi'],color='category')
+#my_chart.add_rows(test['rsi'],color='category')
 #my_chart.add_rows(test['Predictions'])
 #mainchart=st.line_chart(stdf) 
 #x=train['date'],y=test['rsi'])
@@ -292,7 +292,7 @@ plt.ylabel("RSI Price")
 plt.legend()
 plt.show()
 
-fig, ax = plt.subplots()
+#fig, ax = plt.subplots()
 #ax.plot(x, y)
 #ax.set_title("Sine Wave")
 
